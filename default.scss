@@ -1,0 +1,71 @@
+// Reset
+* { margin: 0; padding: 0; }
+* { top: 0; left: 0; }
+* { text-decoration: none; }
+* { outline: none; resize: none; text-decoration: none; border: none; }
+* { list-style-type: none; list-style-position: inside; }
+* { font-family: Arial; font-weight: normal; font-style: normal; }
+
+// Default
+html { overflow-x: hidden; }
+.clearfix {  content: ''; display: table; clear: both; }
+.left_n { float: left; }
+.right_n { float: right; }
+.absolute_n { position: absolute; }
+.relative_n { position: relative; }
+.fixed_n { position: fixed; }
+.block_n { display: block; }
+.inline_block_n { display: inline-block; }
+.full_n { width: 100%; }
+.half_n { width: 50%; }
+
+// Default Grid
+.coluna 		{ float: left; }
+.coluna 		{ display: inline-block; }
+.coluna.c1 		{ width: 10%; }
+.coluna.c2 		{ width: 20%; }
+.coluna.c3 		{ width: 30%; }
+.coluna.c4 		{ width: 40%; }
+.coluna.c5 		{ width: 50%; }
+.coluna.c6 		{ width: 60%; }
+.coluna.c7 		{ width: 70%; }
+.coluna.c8 		{ width: 80%; }
+.coluna.c9 		{ width: 90%; }
+.coluna.c10 	{ width: 100%; }
+
+// Site config
+.content_box 	{ width: 1180px; margin: 0 auto; }
+.content 		{ width: 100%; display: inline-block; }
+
+
+
+// SCSS Functions
+@mixin radius ($radius: 5px) { // @include radius (5px);
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin opacity($opacity) { // @include opacity (99);
+    $ieOpacity: $opacity * 100;
+    opacity: $opacity;
+}
+
+@mixin transition($time: 0.35s){ // @include transition (0.35s);
+    -webkit-transition: all $time ease;
+    -moz-transition: all $time ease;
+    -o-transition: all $time ease;
+    transition: all $time ease;
+}
+
+@mixin centered($width){ // @include centered (99px);
+    position: absolute;
+    left: calc(50% - #{$width} / 2);
+    left: -webkit-calc(50% - #{$width} / 2);
+}
+
+@mixin middle($height){ // @include middle (99px);
+    position: absolute;
+    top: calc(50% - #{$height} / 2);
+    top: -webkit-calc(50% - #{$height} / 2);
+}
